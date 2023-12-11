@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digtal clock</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="cont">
+        <ul id="cl">
+            <li id="ho">00</li>
+            <li>:</li>
+            <li id="mi">00</li>
+            <li>:</li>
+            <li id="soc">00</li>
+        </ul>
+    </div>
+    <script>
+        function updateClock() {
+            let hours = document.getElementById("ho");
+            let minutes = document.getElementById("mi");
+            let seconds = document.getElementById("soc");
+            let date = new Date();
+            
+            hours.textContent = date.getHours();
+            minutes.textContent = date.getMinutes();
+            seconds.textContent = date.getSeconds();
+        }
+        setInterval(updateClock);
+    </script>
+</body>
+</html>
